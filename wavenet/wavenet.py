@@ -88,8 +88,8 @@ class FastWaveNet(nn.Module):
         self.dilated_queues = []
         self.filter_convs = nn.ModuleList()
         self.gate_convs = nn.ModuleList()
-        self.residual_convs = []
-        self.skip_convs = []
+        self.residual_convs = nn.ModuleList()
+        self.skip_convs = nn.ModuleList()
 
         # filter non-linearity
         self.filter_act = F.tanh
